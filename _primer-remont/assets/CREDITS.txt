@@ -1,0 +1,12 @@
+Источники изображений и данных
+
+Фото: Unsplash, бесплатная лицензия Unsplash License (https://unsplash.com/license)
+hero-1.jpg — immo RENOVATION, https://unsplash.com/photos/kitchen-renovation-with-white-cabinets-UqNEbyRQ660
+work-1.jpg — charlesdeluvio, https://unsplash.com/photos/person-holding-white-tile-LyQi9DS7AEg
+work-2.jpg — Tile Merchant Ireland, https://unsplash.com/photos/a-modern-bathroom-with-a-mirror-wooden-vanity-and-toilet-6Lp7Rf7kkKs
+work-3.jpg — Karl Solano, https://unsplash.com/photos/paint-roller-in-white-paint-tray-eQ-8iUrb07g
+work-4.jpg — Milivoj Kuhar, https://unsplash.com/photos/man-climbing-on-ladder-inside-room-Te48TPzdcU8
+work-5.jpg — charlesdeluvio, https://unsplash.com/photos/a-man-is-holding-a-drill-and-a-cordless-drill-kP2_hVDqOzk
+work-6.jpg — Stefan Lehner, https://unsplash.com/photos/room-renovation-with-metal-support-poles-biRt6RXejuk
+
+Шрифты: Google Fonts через Fontsource, лицензия SIL Open Font License 1.1.
