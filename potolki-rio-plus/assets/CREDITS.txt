@@ -1,0 +1,16 @@
+Источники изображений и данных
+
+Фото: Unsplash, бесплатная лицензия Unsplash License (https://unsplash.com/license). Это сток, не фото работ компании.
+hero-1.jpg — Zac Gudakov, https://unsplash.com/photos/black-couch-near-black-fireplace-eygR_ULXxb8
+work-1.jpg — EZcurtain Life, https://unsplash.com/photos/modern-living-room-with-neutral-color-scheme-and-minimalist-decor-tIgnjxFh720
+work-2.jpg — Emmanuel Black, https://unsplash.com/photos/modern-living-room-with-sectional-sofa-and-coffee-table-UKkKri1dVKk
+work-3.jpg — luis ortega, https://unsplash.com/photos/elegant-lighting-and-curves-decorate-the-ceiling-89RsOg-hWyM
+work-4.jpg — Zac Gudakov, https://unsplash.com/photos/o-uPDNNSsDA
+work-5.jpg — Icarus Chu, https://unsplash.com/photos/white-ceiling-with-white-ceiling-aAQ_w3u-Wyo
+work-6.jpg — Meritt Thomas, https://unsplash.com/photos/white-ceiling-with-white-light-bapKjLClteo
+
+Данные о бизнесе взяты из открытых карточек:
+https://2gis.ru/nizhnevartovsk/firm/70000001102244525
+https://vk.com/rio_nv
+
+Шрифты: Google Fonts через Fontsource, лицензия SIL Open Font License 1.1.
