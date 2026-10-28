@@ -131,8 +131,17 @@ html.js [data-hero="4"]{animation-delay:.28s}
 html.js [data-hero="5"]{animation-delay:.36s}
 html.js [data-hero="6"]{animation-delay:.44s}
 html.js [data-hero="art"]{animation-delay:.15s}
-html.js [data-reveal]{opacity:0;transform:translateY(12px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
-html.js [data-reveal].is-in{opacity:1;transform:none}
+/* проявление при прокрутке: прячем только под html.rv (его ставит site.js после настройки) */
+:root{--ease-out:cubic-bezier(.23,1,.32,1)}
+html.rv [data-reveal]:not(.rv-list),html.rv .rv-kid{opacity:0;transform:translate3d(0,14px,0);
+  transition:opacity .6s var(--ease-out),transform .6s var(--ease-out);transition-delay:var(--d,0ms)}
+html.rv [data-reveal].is-in:not(.rv-list),html.rv .is-in .rv-kid{opacity:1;transform:none}
+/* фото: лёгкий зум внутри рамки при появлении */
+.gallery__frame,.band{overflow:hidden}
+html.rv .gallery__item img,html.rv .band img{transform:scale(1.06);transition:transform .7s var(--ease-out);transition-delay:var(--d,0ms)}
+html.rv .is-in .gallery__item img,html.rv .band.is-in img{transform:none}
+.count{display:inline-block;text-align:right;font-variant-numeric:lining-nums tabular-nums}
+.facts__num.count{display:block;text-align:left}
 html.static [data-hero],html.static [data-reveal]{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -144,6 +153,25 @@ html.static *,html.static *::before,html.static *::after{animation:none!importan
 html.js .dock{transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
 html.js.dock-on .dock{transform:none}
 @media (prefers-reduced-motion:reduce){html.js .dock{transition:none}}
+/* панель «Позвонить»: прячем, только если site.js следит за прокруткой (html.dock-js) */
+html.js .dock{transform:none;transition:none}
+html.dock-js .dock{transform:translate3d(0,calc(100% + 12px),0);opacity:0;
+  transition:transform .45s var(--ease-out),opacity .3s ease}
+html.dock-js.dock-on .dock{transform:none;opacity:1}
+/* отклик кнопок: наведение только для мыши, нажатие — лёгкое сжатие */
+.btn,.dock__btn,.contacts__links a{-webkit-tap-highlight-color:transparent;
+  transition:background-color .2s ease,color .2s ease,border-color .2s ease,box-shadow .25s ease,transform .16s var(--ease-out)}
+.btn:active,.dock__btn:active,.contacts__links a:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{transform:translateY(-2px)}
+  .btn--primary:hover{box-shadow:0 10px 24px -12px rgba(0,0,0,.45)}
+  .btn:active{transform:translateY(0) scale(.97)}
+}
+@media (prefers-reduced-motion:reduce){
+  html.dock-js .dock,.btn,.dock__btn,.contacts__links a{transition:none}
+  html.rv .gallery__item img,html.rv .band img{transform:none;transition:none}
+  .btn:hover,.btn:active,.dock__btn:active,.contacts__links a:active{transform:none}
+}
 
 /* ===== Тема «Калибр»: синий лист чертежа, узкий капс, размерные линии ===== */
 body.theme-kalibr{
@@ -262,3 +290,25 @@ html.js .theme-kalibr .dim__t,html.js .theme-kalibr .dim__label{animation:kal-po
   .theme-kalibr .hero__lead{font-size:21px;margin-top:32px}
   .theme-kalibr .hero__art{grid-column:2;grid-row:4 / span 2;margin-top:36px}
 }
+/* --- движение: линии чертежа прорисовываются слева направо --- */
+.theme-kalibr .gallery__frame{overflow:visible}
+.theme-kalibr .gallery__item img{outline:1px solid rgba(32,38,42,.1);outline-offset:-1px}
+html.rv .theme-kalibr .gallery__item img{transform:none}
+html.rv .theme-kalibr .gallery__frame::before,html.rv .theme-kalibr .gallery__frame::after{opacity:0;transform:scale(.4);
+  transition:opacity .4s ease,transform .5s var(--ease-out);transition-delay:calc(var(--d,0ms) + .25s)}
+html.rv .theme-kalibr .gallery__frame::before{transform-origin:0 0}
+html.rv .theme-kalibr .gallery__frame::after{transform-origin:100% 100%}
+html.rv .theme-kalibr .is-in .gallery__frame::before,html.rv .theme-kalibr .is-in .gallery__frame::after{opacity:1;transform:none}
+.theme-kalibr .services__item,.theme-kalibr .prices__row{position:relative}
+html.rv .theme-kalibr .services__item.rv-kid,html.rv .theme-kalibr .prices__row.rv-kid{border-bottom-color:transparent}
+html.rv .theme-kalibr .rv-kid.services__item::after,html.rv .theme-kalibr .rv-kid.prices__row::after{content:"";position:absolute;
+  left:0;right:0;bottom:-1px;height:1px;background:var(--line);transform:scaleX(0);transform-origin:0 50%;
+  transition:transform .7s cubic-bezier(.65,0,.35,1);transition-delay:calc(var(--d,0ms) + .1s)}
+html.rv .theme-kalibr .is-in .rv-kid::after{transform:none}
+html.rv .theme-kalibr .steps__item.rv-kid{border-top-color:transparent}
+html.rv .theme-kalibr .steps__item.rv-kid::before{content:"";position:absolute;left:0;right:0;top:-2px;height:2px;
+  background:var(--ink);transform:scaleX(0);transform-origin:0 50%;transition:transform .7s cubic-bezier(.65,0,.35,1) var(--d,0ms)}
+.theme-kalibr .steps__item{position:relative}
+html.rv .theme-kalibr .is-in .steps__item::before{transform:none}
+.theme-kalibr .btn--primary:hover{box-shadow:0 0 0 3px var(--mark)}
+@media (prefers-reduced-motion:reduce){html.rv .theme-kalibr .rv-kid::after,html.rv .theme-kalibr .rv-kid::before{transition:none;transform:none}}

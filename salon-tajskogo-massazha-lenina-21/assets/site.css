@@ -134,8 +134,17 @@ html.js [data-hero="4"]{animation-delay:.28s}
 html.js [data-hero="5"]{animation-delay:.36s}
 html.js [data-hero="6"]{animation-delay:.44s}
 html.js [data-hero="art"]{animation-delay:.15s}
-html.js [data-reveal]{opacity:0;transform:translateY(12px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
-html.js [data-reveal].is-in{opacity:1;transform:none}
+/* проявление при прокрутке: прячем только под html.rv (его ставит site.js после настройки) */
+:root{--ease-out:cubic-bezier(.23,1,.32,1)}
+html.rv [data-reveal]:not(.rv-list),html.rv .rv-kid{opacity:0;transform:translate3d(0,14px,0);
+  transition:opacity .6s var(--ease-out),transform .6s var(--ease-out);transition-delay:var(--d,0ms)}
+html.rv [data-reveal].is-in:not(.rv-list),html.rv .is-in .rv-kid{opacity:1;transform:none}
+/* фото: лёгкий зум внутри рамки при появлении */
+.gallery__frame,.band{overflow:hidden}
+html.rv .gallery__item img,html.rv .band img{transform:scale(1.06);transition:transform .7s var(--ease-out);transition-delay:var(--d,0ms)}
+html.rv .is-in .gallery__item img,html.rv .band.is-in img{transform:none}
+.count{display:inline-block;text-align:right;font-variant-numeric:lining-nums tabular-nums}
+.facts__num.count{display:block;text-align:left}
 html.static [data-hero],html.static [data-reveal]{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -147,6 +156,25 @@ html.static *,html.static *::before,html.static *::after{animation:none!importan
 html.js .dock{transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
 html.js.dock-on .dock{transform:none}
 @media (prefers-reduced-motion:reduce){html.js .dock{transition:none}}
+/* панель «Позвонить»: прячем, только если site.js следит за прокруткой (html.dock-js) */
+html.js .dock{transform:none;transition:none}
+html.dock-js .dock{transform:translate3d(0,calc(100% + 12px),0);opacity:0;
+  transition:transform .45s var(--ease-out),opacity .3s ease}
+html.dock-js.dock-on .dock{transform:none;opacity:1}
+/* отклик кнопок: наведение только для мыши, нажатие — лёгкое сжатие */
+.btn,.dock__btn,.contacts__links a{-webkit-tap-highlight-color:transparent;
+  transition:background-color .2s ease,color .2s ease,border-color .2s ease,box-shadow .25s ease,transform .16s var(--ease-out)}
+.btn:active,.dock__btn:active,.contacts__links a:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{transform:translateY(-2px)}
+  .btn--primary:hover{box-shadow:0 10px 24px -12px rgba(0,0,0,.45)}
+  .btn:active{transform:translateY(0) scale(.97)}
+}
+@media (prefers-reduced-motion:reduce){
+  html.dock-js .dock,.btn,.dock__btn,.contacts__links a{transition:none}
+  html.rv .gallery__item img,html.rv .band img{transform:none;transition:none}
+  .btn:hover,.btn:active,.dock__btn:active,.contacts__links a:active{transform:none}
+}
 
 /* ===== Тема «Бархат»: журнальный разворот, курсив, арка с монограммой ===== */
 body.theme-barhat{
@@ -262,3 +290,22 @@ body.theme-barhat{--alt:#FBF6F3;font-size:18px}
   .theme-barhat .hero__text{padding-bottom:8px}
 }
 .theme-barhat .hero__title.title--xlong{font-size:clamp(36px,9vw,96px)}
+/* --- движение: арка раскрывается снизу вверх (шторка на transform), фото мягко оседает --- */
+html.js .theme-barhat .arch{animation:none}
+.theme-barhat .arch::before{content:"";position:absolute;inset:-1px;z-index:2;background:var(--bg);
+  transform:translate3d(0,-101%,0);pointer-events:none}
+@keyframes bar-curtain{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,-101%,0)}}
+@keyframes bar-settle{from{transform:scale(1.08)}to{transform:none}}
+@keyframes bar-line{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+html.js .theme-barhat .arch::before{animation:bar-curtain .9s cubic-bezier(.77,0,.18,1) .1s both}
+html.js .theme-barhat .arch img{animation:bar-settle 1.4s var(--ease-out) .1s both}
+html.js .theme-barhat .arch::after{transform-origin:50% 100%;animation:bar-line .6s var(--ease-out) .8s both}
+/* галерея: арки и прямоугольники, зум внутри формы */
+.theme-barhat .gallery__item:nth-child(odd) .gallery__frame{border-radius:999px 999px 0 0}
+.theme-barhat .gallery__item img{outline:1px solid rgba(74,28,41,.08);outline-offset:-1px}
+.theme-barhat .btn--primary:hover{box-shadow:0 12px 28px -14px rgba(74,28,41,.6)}
+.theme-barhat .contacts__links a,.theme-barhat .dock__btn{transition-property:background-color,color,border-color,transform}
+@media (prefers-reduced-motion:reduce){
+  html.js .theme-barhat .arch::before{animation:none}
+  html.js .theme-barhat .arch img,html.js .theme-barhat .arch__mono,html.js .theme-barhat .arch::after{animation:none}
+}
