@@ -4,7 +4,8 @@
    Запасной таймер: если наблюдатель не ответил за 2,5 с — показать всё. */
 (function () {
   var root = document.documentElement;
-  var all = function (s, el) { return [].slice.call((el || document).querySelectorAll(s)); };
+  setTimeout(function () { root.classList.add('hero-done'); }, 1600);
+  var all =function (s, el) { return [].slice.call((el || document).querySelectorAll(s)); };
   var qs = location.search;
   var isStatic = (navigator.webdriver && !/[?&]motion\b/.test(qs)) || /[?&]static\b/.test(qs);
   var reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
