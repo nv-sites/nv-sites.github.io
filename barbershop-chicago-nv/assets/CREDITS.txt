@@ -1,0 +1,18 @@
+Источники изображений и данных
+
+Фото: Unsplash, бесплатная лицензия Unsplash License (https://unsplash.com/license). Это сток, не фото барбершопа.
+hero-1.jpg — Waves Barbershop, https://unsplash.com/photos/QmH_pfIuojQ
+work-1.jpg — Nate Johnston, https://unsplash.com/photos/a-man-cutting-another-mans-hair-with-a-pair-of-scissors-tgPrIYnW3g4
+work-2.jpg — Nathon Oski, https://unsplash.com/photos/grayscale-photography-of-person-holding-scissor-clipping-mans-beard-fE42nRlBcG8
+work-3.jpg — Victor Sirbu, https://unsplash.com/photos/TGdKH24tX7I
+work-4.jpg — Fábio Alves, https://unsplash.com/photos/DYetcnz0jRY
+work-5.jpg — Peter Vimalis, https://unsplash.com/photos/a-barber-in-black-gloves-cutting-a-mans-hair-CMt1rgM5Y0I
+work-6.jpg — Josh Sorenson, https://unsplash.com/photos/FvKpUZCbZ-s
+
+Данные о бизнесе взяты из открытых карточек:
+https://2gis.ru/nizhnevartovsk/firm/70000001037537449
+https://zoon.ru/nizhnevartovsk/beauty/barbershop_chicago_na_ulitse_60_let_oktyabrya/
+https://vk.com/chicago_barbershop
+http://n230196.yclients.com/
+
+Шрифты: Google Fonts через Fontsource, лицензия SIL Open Font License 1.1.

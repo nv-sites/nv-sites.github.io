@@ -1,0 +1,15 @@
+Источники изображений и данных
+
+Фото: Unsplash, бесплатная лицензия Unsplash License (https://unsplash.com/license). Это сток, не фото центра.
+hero-1.jpg — Anna Keibalo, https://unsplash.com/photos/a-woman-getting-a-facial-massage-at-a-spa-qybZ2w0CzMw
+work-1.jpg — Taylor Heery, https://unsplash.com/photos/a-woman-laying-on-a-bed-with-hot-stones-on-her-back-_TyrA1RUaiI
+work-2.jpg — Toa Heftiba, https://unsplash.com/photos/man-massaging-womans-body-a9pFSC8dTlo (обрезано)
+work-3.jpg — Anna Keibalo, https://unsplash.com/photos/a-woman-getting-a-facial-massage-at-a-spa-BJ7i-96glwM
+work-4.jpg — Mat Kilkeary, https://unsplash.com/photos/yBLLzNcA6GU
+work-5.jpg — Simon HUMLER, https://unsplash.com/photos/a-woman-getting-a-back-massage-at-a-spa--AakIaAPV0w
+work-6.jpg — Mat Kilkeary, https://unsplash.com/photos/9BjH8jl7Uj0
+
+Данные о бизнесе взяты из открытых карточек:
+https://2gis.ru/nizhnevartovsk/firm/70000001099250670
+
+Шрифты: Google Fonts через Fontsource, лицензия SIL Open Font License 1.1.
