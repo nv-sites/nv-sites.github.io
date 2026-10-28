@@ -1,0 +1,13 @@
+Источники изображений и данных
+
+Фото: Unsplash, бесплатная лицензия Unsplash License (https://unsplash.com/license). Это сток, не фото компании.
+hero-1.jpg — Giorgio Trovato, https://unsplash.com/photos/5TXz228u4eo (обрезано)
+work-1.jpg — California Steam & Dry Carpet Cleaning, https://unsplash.com/photos/Ddzir2TCR2g (обрезано)
+work-2.jpg — Vitaly Gariev, https://unsplash.com/photos/2NcTLdFHpH8 (обрезано)
+work-3.jpg — Costa Live, https://unsplash.com/photos/bR-Z4-6aI3M (обрезано)
+
+Данные о бизнесе взяты из открытых карточек:
+https://2gis.ru/nizhnevartovsk/firm/70000001079610407
+https://vk.com/auracleaningcompany
+
+Шрифты: Google Fonts через Fontsource, лицензия SIL Open Font License 1.1.

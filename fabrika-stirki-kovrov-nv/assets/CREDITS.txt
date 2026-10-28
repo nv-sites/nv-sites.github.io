@@ -1,0 +1,12 @@
+Источники изображений и данных
+
+Фото: Unsplash, бесплатная лицензия Unsplash License (https://unsplash.com/license). Это сток, не фото компании.
+hero-1.jpg — Good Days Digital, https://unsplash.com/photos/Vra_DPrrBlE
+work-1.jpg — Zulfugar Karimov, https://unsplash.com/photos/YY8bc3JKdQ0 (обрезано)
+work-2.jpg — Erfan Banaei, https://unsplash.com/photos/p00r5JmTMpY
+work-3.jpg — Sina Saadatmand, https://unsplash.com/photos/gB9hryu1q40
+
+Данные о бизнесе взяты из открытых карточек:
+https://2gis.ru/nizhnevartovsk/firm/70000001095140629
+
+Шрифты: Google Fonts через Fontsource, лицензия SIL Open Font License 1.1.
